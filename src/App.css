@@ -3,20 +3,22 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 300px;
+  width: 360px;
   border: 1px solid #000;
-  margin: 50px auto;
+  margin: 80px auto;
 }
 
 .div-screen {
   display: flex;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 10px;
   justify-content: center;
   align-items: flex-end;
   background-color: #444;
   flex-direction: column;
-  width: 260px;
+  width: 320px;
 }
 
 .div-screen-operation {
@@ -33,11 +35,11 @@
 .button {
   font-size: 30px;
   height: 75px;
-  width: 75px;
-  padding: 20px;
+  width: 90px;
+  padding: 8px;
   background-color: #000;
   color: #fff;
-  border-color: #000;
+  border-color: #111;
   text-align: center;
   outline: none;
 }
@@ -45,4 +47,43 @@
 .buttons {
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.title {
+  font-size: 25px;
+  margin: 14px;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .container {
+    margin: 20px auto;
+    width: 320px;
+  }
+
+  .button {
+    width: 80px;
+  }
+
+  .div-screen {
+    width: 280px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    margin: 10px auto;
+    width: 300px;
+  }
+
+  .button {
+    width: 75px;
+    height: 65px;
+  }
+
+  .div-screen {
+    width: 260px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }

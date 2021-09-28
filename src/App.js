@@ -62,23 +62,23 @@ export default function App() {
       setResult(res);
       setOperate(true);
     } catch {
-      setResult('Error!');
+      setResult('Error');
     }
   };
 
   return (
     <div className="container">
-      <h3>Calculator</h3>
+      <h3 className="title">Calculator</h3>
       {screen(valueScreen, result)}
       <div className="buttons">
-        {button('AC', cleanScreen)}
-        {button('(', () => addDigitScreen('('))}
-        {button(')', () => addDigitScreen(')'))}
-        {button('/', () => addDigitScreen('/'))}
+        {button('C', cleanScreen)}
+        {button('DEL', () => operation('backspace'))}
+        {button('%', () => operation('='))}
+        {button('÷', () => addDigitScreen('/'))}
         {button('7', () => addDigitScreen('7'))}
         {button('8', () => addDigitScreen('8'))}
         {button('9', () => addDigitScreen('9'))}
-        {button('*', () => addDigitScreen('*'))}
+        {button('x', () => addDigitScreen('*'))}
         {button('4', () => addDigitScreen('4'))}
         {button('5', () => addDigitScreen('5'))}
         {button('6', () => addDigitScreen('6'))}
@@ -88,9 +88,14 @@ export default function App() {
         {button('3', () => addDigitScreen('3'))}
         {button('+', () => addDigitScreen('+'))}
         {button('0', () => addDigitScreen('0'))}
+        {button('00', () => addDigitScreen('00'))}
+        {button('000', () => addDigitScreen('000'))}
+        {button('+/-', () => operation('backspace'))}
+        {button('(', () => addDigitScreen('('))}
+        {button(')', () => addDigitScreen(')'))}
         {button('.', () => addDigitScreen('.'))}
-        {button('<-', () => operation('backspace'))}
         {button('=', () => operation('='))}
+        
       </div>
     </div>
   );
