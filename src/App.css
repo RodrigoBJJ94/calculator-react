@@ -59,7 +59,7 @@
 
 @media (max-width: 800px) {
   .container {
-    margin: 20px auto;
+    margin: 35px auto;
     width: 320px;
   }
 
@@ -72,7 +72,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 320px) {
   .container {
     margin: 10px auto;
     width: 300px;
