@@ -15,7 +15,7 @@
   padding-top: 15px;
   padding-bottom: 10px;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   background-color: #444;
   flex-direction: column;
   width: 320px;

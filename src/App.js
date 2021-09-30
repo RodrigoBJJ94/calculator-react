@@ -48,6 +48,8 @@ export default function App() {
   };
 
   const operation = (op) => {
+    let vScreen = valueScreen;
+    
     if (op === 'backspace') {
       let vScreen = valueScreen;
       vScreen = vScreen.substring(0, (vScreen.length - 1));
@@ -56,11 +58,37 @@ export default function App() {
       return;
     }
 
+    if (op === 'invert') {
+      let vScreen = valueScreen;
+      vScreen = vScreen * -1;
+      setValueScreen(vScreen);
+      setOperate(false);
+      return;
+    }
+
     try {
-      const res = eval(valueScreen);
-      setAccumulator(res);
-      setResult(res);
-      setOperate(true);
+      //let vScreen = valueScreen;
+      if ((vScreen.match(`[%]`)) && (vScreen.match(`[-]`))) {
+        let percent = vScreen.split('-');
+        let percent2 = percent[1].substring(0, (percent[1].length - 1))
+        let percent3 = Number(percent[0] / 100) * Number(percent2);
+        let percent4 = Number(percent[0]) - Number(percent3);
+        setOperate(true);
+        setResult(percent4);
+      } else if (vScreen.match(`[%]`)) {
+        let percent5 = vScreen.split('+');
+        let percent6 = percent5[1].substring(0, (percent5[1].length - 1))
+        let percent7 = Number(percent5[0] / 100) * Number(percent6);
+        let percent8 = Number(percent5[0]) + Number(percent7);
+        setOperate(true);
+        setResult(percent8);
+      } else {
+        const res = eval(valueScreen);
+        setAccumulator(res);
+        setResult(res);
+        setOperate(true);
+      }
+
     } catch {
       setResult('Error');
     }
@@ -73,7 +101,7 @@ export default function App() {
       <div className="buttons">
         {button('C', cleanScreen)}
         {button('DEL', () => operation('backspace'))}
-        {button('%', () => operation('='))}
+        {button('%', () => operation('%'))}
         {button('÷', () => addDigitScreen('/'))}
         {button('7', () => addDigitScreen('7'))}
         {button('8', () => addDigitScreen('8'))}
@@ -90,12 +118,12 @@ export default function App() {
         {button('0', () => addDigitScreen('0'))}
         {button('00', () => addDigitScreen('00'))}
         {button('000', () => addDigitScreen('000'))}
-        {button('+/-', () => operation('backspace'))}
+        {button('+/-', () => operation('invert'))}
         {button('(', () => addDigitScreen('('))}
         {button(')', () => addDigitScreen(')'))}
         {button('.', () => addDigitScreen('.'))}
         {button('=', () => operation('='))}
-        
+
       </div>
     </div>
   );
