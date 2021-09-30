@@ -48,26 +48,26 @@ export default function App() {
   };
 
   const operation = (op) => {
-    let vScreen = valueScreen;
-    
     if (op === 'backspace') {
       let vScreen = valueScreen;
       vScreen = vScreen.substring(0, (vScreen.length - 1));
       setValueScreen(vScreen);
       setOperate(false);
       return;
-    }
+    };
 
-    if (op === 'invert') {
+    /*if (op === 'squareRoot') {
       let vScreen = valueScreen;
-      vScreen = vScreen * -1;
-      setValueScreen(vScreen);
+      let vScreenNumber = Number(vScreen);
+      vScreenNumber = Math.sqrt(vScreenNumber);
+      alert(vScreenNumber)
+      setValueScreen(vScreenNumber);
       setOperate(false);
       return;
-    }
+    };*/
 
     try {
-      //let vScreen = valueScreen;
+      let vScreen = valueScreen;
       if ((vScreen.match(`[%]`)) && (vScreen.match(`[-]`))) {
         let percent = vScreen.split('-');
         let percent2 = percent[1].substring(0, (percent[1].length - 1))
@@ -101,7 +101,7 @@ export default function App() {
       <div className="buttons">
         {button('C', cleanScreen)}
         {button('DEL', () => operation('backspace'))}
-        {button('%', () => operation('%'))}
+        {button('%', () => addDigitScreen('%'))}
         {button('÷', () => addDigitScreen('/'))}
         {button('7', () => addDigitScreen('7'))}
         {button('8', () => addDigitScreen('8'))}
@@ -118,12 +118,11 @@ export default function App() {
         {button('0', () => addDigitScreen('0'))}
         {button('00', () => addDigitScreen('00'))}
         {button('000', () => addDigitScreen('000'))}
-        {button('+/-', () => operation('invert'))}
+        {button('√', () => operation('squareRoot'))}
         {button('(', () => addDigitScreen('('))}
         {button(')', () => addDigitScreen(')'))}
         {button('.', () => addDigitScreen('.'))}
         {button('=', () => operation('='))}
-
       </div>
     </div>
   );

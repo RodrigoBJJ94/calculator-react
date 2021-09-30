@@ -6,6 +6,7 @@
   width: 360px;
   border: 1px solid #000;
   margin: 80px auto;
+  background-color: #222;
 }
 
 .div-screen {
@@ -39,7 +40,7 @@
   padding: 8px;
   background-color: #000;
   color: #fff;
-  border-color: #111;
+  border-color: #222;
   text-align: center;
   outline: none;
 }
@@ -53,6 +54,7 @@
   font-size: 25px;
   margin: 14px;
   font-weight: bold;
+  color: #fff;
 }
 
 @media (max-width: 800px) {
