@@ -100,7 +100,8 @@ export default function App() {
       <Title />
       <ScreenCall screen={screen} valueScreen={valueScreen} result={result} />
       <div className="buttons">
-        <ButtonsCall button={button} cleanScreen={cleanScreen} operation={operation} addDigitScreen={addDigitScreen} />
+        <ButtonsCall button={button} cleanScreen={cleanScreen}
+          operation={operation} addDigitScreen={addDigitScreen} />
       </div>
     </div>
   );
