@@ -98,10 +98,14 @@ export default function App() {
   return (
     <div className="container">
       <Title />
-      <ScreenCall screen={screen} valueScreen={valueScreen} result={result} />
+      <ScreenCall
+        screen={screen} valueScreen={valueScreen} result={result}
+      />
       <div className="buttons">
-        <ButtonsCall button={button} cleanScreen={cleanScreen}
-          operation={operation} addDigitScreen={addDigitScreen} />
+        <ButtonsCall
+          button={button} cleanScreen={cleanScreen}
+          operation={operation} addDigitScreen={addDigitScreen}
+        />
       </div>
     </div>
   );
