@@ -1,23 +1,14 @@
 import React, { useState } from 'react';
 import './App.css';
-import Screen from './components/Screen/Screen';
-import Button from './components/Button';
 import Title from './components/Title/Title';
-import ButtonsCall from './components/ButtonsCall';
+import Screen from './components/Screen/Screen';
+import Buttons from './components/Buttons/Buttons';
 
 export default function App() {
   const [valueScreen, setValueScreen] = useState('');
   const [result, setResult] = useState(0);
   const [accumulator, setAccumulator] = useState();
   const [operate, setOperate] = useState(false);
-
-
-
-  const button = (label, onClick) => {
-    return (
-      <Button label={label} onClick={onClick} />
-    );
-  };
 
   const addDigitScreen = (digit) => {
     if ((digit === '*' || digit === '/' || digit === '+' || digit === '-') && operate) {
@@ -34,14 +25,6 @@ export default function App() {
 
     const typedValueScreen = valueScreen + digit;
     setValueScreen(typedValueScreen);
-  };
-
-  const cleanScreen = () => {
-    setOperate(false);
-    setValueScreen('');
-    setResult(0);
-    setAccumulator(0);
-    return;
   };
 
   const operation = (op) => {
@@ -95,10 +78,9 @@ export default function App() {
       <Title />
       <Screen valueScreen={valueScreen} result={result} />
       <div className="buttons">
-        <ButtonsCall
-          button={button} cleanScreen={cleanScreen}
-          operation={operation} addDigitScreen={addDigitScreen}
-        />
+        <Buttons
+          operation={operation} addDigitScreen={addDigitScreen} setOperate={setOperate}
+          setValueScreen={setValueScreen} setResult={setResult} setAccumulator={setAccumulator} />
       </div>
     </div>
   );
