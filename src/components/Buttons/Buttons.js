@@ -1,4 +1,5 @@
 import React from 'react';
+import './Styles.css';
 
 export default function ButtonsCall({ operation, addDigitScreen, setOperate, setValueScreen, setResult, setAccumulator }) {
     const button = (label, onClick) => {

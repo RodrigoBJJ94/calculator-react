@@ -1,0 +1,43 @@
+.div-screen {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #444;
+    flex-direction: column;
+    width: 350px;
+}
+  
+.div-screen-operation {
+    font-size: 25px;
+    color: #fff;
+    height: 20px;
+}
+  
+.div-screen-result {
+    font-size: 50px;
+    color: #fff;
+}
+
+@media (max-width: 800px) {
+    .div-screen {
+      width: 350px;
+    }
+}
+
+@media (max-width: 400px) {
+    .div-screen {
+      width: 300px;
+    }
+}
+  
+@media (max-width: 320px) {
+    .div-screen {
+      width: 260px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+}

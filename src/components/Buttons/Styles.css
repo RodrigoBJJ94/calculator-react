@@ -1,0 +1,36 @@
+.button {
+    font-size: 30px;
+    height: 85px;
+    width: 97.5px;
+    padding: 8px;
+    background-color: #000;
+    color: #fff;
+    border-color: #222;
+    text-align: center;
+    outline: none;
+}
+  
+.buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+    .button {
+      width: 97.5px;
+    }
+}
+
+@media (max-width: 400px) {
+  .button {
+    width: 85px;
+    height: 75px;
+  }
+}
+  
+@media (max-width: 320px) {
+    .button {
+      width: 75px;
+      height: 65px;
+    }
+}

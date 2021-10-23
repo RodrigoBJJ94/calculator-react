@@ -7,72 +7,23 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 360px;
+  width: 390px;
   border: 1px solid #000;
   margin: 80px auto;
   background-color: #222;
 }
 
-.div-screen {
-  display: flex;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 15px;
-  padding-bottom: 10px;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #444;
-  flex-direction: column;
-  width: 320px;
-}
-
-.div-screen-operation {
-  font-size: 25px;
-  color: #fff;
-  height: 20px;
-}
-
-.div-screen-result {
-  font-size: 50px;
-  color: #fff;
-}
-
-.button {
-  font-size: 30px;
-  height: 75px;
-  width: 90px;
-  padding: 8px;
-  background-color: #000;
-  color: #fff;
-  border-color: #222;
-  text-align: center;
-  outline: none;
-}
-
-.buttons {
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.title {
-  font-size: 25px;
-  margin: 14px;
-  font-weight: bold;
-  color: #fff;
-}
-
 @media (max-width: 800px) {
   .container {
-    margin: 35px auto;
-    width: 320px;
+    margin: 12px auto;
+    width: 390px;
   }
+}
 
-  .button {
-    width: 80px;
-  }
-
-  .div-screen {
-    width: 280px;
+@media (max-width: 400px) {
+  .container {
+    margin: 8px auto;
+    width: 340px;
   }
 }
 
@@ -80,16 +31,5 @@
   .container {
     margin: 10px auto;
     width: 300px;
-  }
-
-  .button {
-    width: 75px;
-    height: 65px;
-  }
-
-  .div-screen {
-    width: 260px;
-    padding-top: 0px;
-    padding-bottom: 0px;
   }
 }
