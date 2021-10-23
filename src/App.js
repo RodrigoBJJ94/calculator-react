@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
-import Screen from './components/Screen';
+import Screen from './components/Screen/Screen';
 import Button from './components/Button';
-import Title from './components/Title';
-import ScreenCall from './components/ScreenCall';
+import Title from './components/Title/Title';
 import ButtonsCall from './components/ButtonsCall';
 
 export default function App() {
@@ -12,11 +11,7 @@ export default function App() {
   const [accumulator, setAccumulator] = useState();
   const [operate, setOperate] = useState(false);
 
-  const screen = (value, res) => {
-    return (
-      <Screen value={value} res={res} />
-    );
-  };
+
 
   const button = (label, onClick) => {
     return (
@@ -98,9 +93,7 @@ export default function App() {
   return (
     <div className="container">
       <Title />
-      <ScreenCall
-        screen={screen} valueScreen={valueScreen} result={result}
-      />
+      <Screen valueScreen={valueScreen} result={result} />
       <div className="buttons">
         <ButtonsCall
           button={button} cleanScreen={cleanScreen}
