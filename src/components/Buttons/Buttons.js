@@ -1,23 +1,13 @@
 import React from 'react';
 import './Styles.css';
 
-export default function ButtonsCall({ operation, addDigitScreen, setOperate, setValueScreen, setResult, setAccumulator }) {
+export default function Buttons({ cleanScreen, operation, addDigitScreen }) {
     const button = (label, onClick) => {
-        return (
-            <button className="button" onClick={onClick}>{label}</button>
-        );
-    };
-
-    const cleanScreen = () => {
-        setOperate(false);
-        setValueScreen('');
-        setResult(0);
-        setAccumulator(0);
-        return;
+        return <button className="button" onClick={onClick}>{label}</button>
     };
 
     return (
-        <>
+        <div className="buttons">
             {button('C', cleanScreen)}
             {button('DEL', () => operation('backspace'))}
             {button('%', () => addDigitScreen('%'))}
@@ -42,6 +32,6 @@ export default function ButtonsCall({ operation, addDigitScreen, setOperate, set
             {button(')', () => addDigitScreen(')'))}
             {button('.', () => addDigitScreen('.'))}
             {button('=', () => operation('='))}
-        </>
+        </div>
     );
 };
