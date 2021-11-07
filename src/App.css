@@ -4,10 +4,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
-  background-color: #eee;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -15,27 +11,28 @@ body {
   align-items: center;
   width: 390px;
   border: 1px solid #000;
+  border-radius: 3px;
   margin: 120px auto;
   background-color: #222;
 }
 
 @media (max-width: 800px) {
   .container {
-    margin: 12px auto;
-    width: 390px;
+    margin: 10px auto;
+    width: 394px;
   }
 }
 
 @media (max-width: 400px) {
   .container {
     margin: 8px auto;
-    width: 340px;
+    width: 356px;
   }
 }
 
 @media (max-width: 320px) {
   .container {
-    margin: 10px auto;
+    margin: -1px auto;
     width: 300px;
   }
 }

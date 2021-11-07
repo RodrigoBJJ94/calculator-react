@@ -24,13 +24,13 @@
 
 @media (max-width: 800px) {
     .div-screen {
-      width: 350px;
+      width: 354px;
     }
 }
 
 @media (max-width: 400px) {
     .div-screen {
-      width: 300px;
+      width: 316px;
     }
 }
   

@@ -17,13 +17,13 @@
 
 @media (max-width: 800px) {
   .button {
-    width: 97.5px;
+    width: 98.5px;
   }
 }
 
 @media (max-width: 400px) {
   .button {
-    width: 85px;
+    width: 89px;
     height: 75px;
   }
 }
@@ -32,5 +32,6 @@
   .button {
     width: 75px;
     height: 65px;
+    font-size: 26px;
   }
 }
