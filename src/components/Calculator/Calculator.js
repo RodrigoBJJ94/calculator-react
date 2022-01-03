@@ -20,6 +20,7 @@ export default function Screen() {
       setOperate(false);
       return;
     };
+
     const typedValueScreen = valueScreen + digit;
     setValueScreen(typedValueScreen);
   };
@@ -80,7 +81,8 @@ export default function Screen() {
   return (
     <>
       <ScreenCalculator valueScreen={valueScreen} result={result} />
-      <Buttons cleanScreen={cleanScreen} operation={operation} addDigitScreen={addDigitScreen} />
+      <Buttons
+        cleanScreen={cleanScreen} operation={operation} addDigitScreen={addDigitScreen} />
     </>
   );
 };
