@@ -1,43 +1,29 @@
 .div-screen {
     display: flex;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 15px;
-    padding-bottom: 10px;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-color: #444;
-    flex-direction: column;
-    width: 350px;
+    width: 18vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1vh;
+    background-color: #444444;
 }
   
 .div-screen-operation {
     font-size: 25px;
-    color: #fff;
-    height: 20px;
+    color: #FFFFFF;
+    height: 2vh;
 }
   
 .div-screen-result {
     font-size: 50px;
-    color: #fff;
+    color: #FFFFFF;
 }
 
 @media (max-width: 800px) {
     .div-screen {
-      width: 354px;
-    }
-}
-
-@media (max-width: 400px) {
-    .div-screen {
-      width: 316px;
-    }
-}
-  
-@media (max-width: 320px) {
-    .div-screen {
-      width: 260px;
-      padding-top: 0px;
-      padding-bottom: 0px;
+      width: 94vw;
     }
 }

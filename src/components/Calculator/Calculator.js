@@ -80,8 +80,15 @@ export default function Screen() {
 
   return (
     <>
-      <ScreenCalculator valueScreen={valueScreen} result={result} />
-      <Buttons cleanScreen={cleanScreen} operation={operation} addDigitScreen={addDigitScreen} />
+      <ScreenCalculator
+        valueScreen={valueScreen}
+        result={result}
+      />
+      <Buttons
+        cleanScreen={cleanScreen}
+        operation={operation}
+        addDigitScreen={addDigitScreen}
+      />
     </>
   );
 };

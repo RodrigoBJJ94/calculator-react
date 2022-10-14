@@ -5,33 +5,26 @@
 
 .button {
   font-size: 30px;
-  height: 85px;
-  width: 97.5px;
-  padding: 8px;
+  height: 8vh;
+  width: 5vw;
+  padding: 1vw 1vh;
   background-color: #000;
-  color: #fff;
-  border-color: #222;
+  color: #FFFFFF;
+  border-color: #222222;
   text-align: center;
   outline: none;
 }
 
 @media (max-width: 800px) {
   .button {
-    width: 98.5px;
+    width: 24vw;
+    height: 12.68vh;
   }
 }
 
 @media (max-width: 400px) {
   .button {
-    width: 89px;
-    height: 75px;
-  }
-}
-
-@media (max-width: 320px) {
-  .button {
-    width: 75px;
-    height: 65px;
-    font-size: 26px;
+    width: 24vw;
+    height: 11.87vh;
   }
 }
