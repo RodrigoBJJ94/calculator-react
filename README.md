@@ -1,2 +1,1 @@
-# calculator-react
- calculator-react
+# Simple Calculator developed in React
